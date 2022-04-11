@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <h2>Take a look at what we offer!</h2>
+    <br>
+    <div *ngFor="let listing of listings" class="container">
+        <mat-card class="example-card">
+            <mat-card-title>{{listing.listing_title}}</mat-card-title>
+            <mat-card-subtitle>{{listing.listing_id}}</mat-card-subtitle>
+            <mat-card-content>
+              <p>Description: {{listing.description}}</p>
+              <p>Address: {{listing.street}}, {{listing.city}} - {{listing.postal_code}}</p>
+              <p>Contact Email: {{listing.email}}</p>
+              <p>Username: {{listing.username}}</p>
+            </mat-card-content>
+          </mat-card>
+    </div>
+</div>
+
+<div class="container">
+    <h3>That's all folks!</h3>
+</div>
+
